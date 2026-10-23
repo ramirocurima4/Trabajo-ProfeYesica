@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtro &amp; Letras | Café de Especialidad &amp; Literatura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navegación Fija -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#inicio" class="logo">Filtro <span>&amp;</span> Letras</a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#menu-maridaje">Menú &amp; Maridaje</a></li>
+          <li><a href="#biblioteca">Biblioteca</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido Principal / Sección Hero -->
+  <main id="inicio" class="hero">
+    <div class="hero-intro">
+      <span class="badge">Café de Especialidad &bull; Rincón Literario</span>
+      <h1>Donde cada taza cuenta una historia</h1>
+      <p class="subtitle">Explora nuestra selección de fragmentos literarios mientras disfrutas de un filtrado de origen.</p>
+    </div>
+
+    <!-- Tarjeta Principal Glassmorphism -->
+    <section id="tarjeta" aria-live="polite">
+      <p id="texto-frase">“El café es el bálsamo del corazón y del espíritu; una pausa escrita con tinta cálida entre las páginas del día.”</p>
+      <p id="autor-frase">— Giuseppe Verdi</p>
+
+      <div class="acciones-tarjeta">
+        <button id="btn-nueva-frase" type="button">Nueva Frase</button>
+        <button id="btn-cambiar-tema" type="button">Cambiar Tema</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
