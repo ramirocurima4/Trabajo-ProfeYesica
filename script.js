@@ -1,4 +1,4 @@
-// Array de 5 objetos con frases literarias y sus respectivos autores
+// Array de objetos con frases literarias y sus respectivos autores
 const frasesLiterarias = [
   {
     texto: "“Siempre imaginé que el Paraíso sería algún tipo de biblioteca.”",
@@ -42,3 +42,9 @@ btnNuevaFrase.addEventListener("click", () => {
 btnCambiarTema.addEventListener("click", () => {
   document.body.classList.toggle("modo-oscuro");
 });
+
+// Actualización automática del año en el pie de página
+const yearCopy = document.getElementById("year-copy");
+if (yearCopy) {
+  yearCopy.textContent = new Date().getFullYear();
+}
