@@ -1,0 +1,93 @@
+====================================================================
+               GUÍA RÁPIDA DE COMANDOS DE GIT BASH
+====================================================================
+
+NOTA IMPORTANTE SOBRE LAS RUTAS EN GIT BASH:
+En Windows / Git Bash, si la ruta de tu carpeta o los nombres tienen
+espacios, SIEMPRE debes escribir la ubicación ENTRE COMILLAS.
+Ejemplo: cd "C:/Users/Oaasis/Desktop/Trabajo-ProfeYesica"
+
+--------------------------------------------------------------------
+1. ENTRAR A LA CARPETA DE TU PROYECTO
+--------------------------------------------------------------------
+¿Cuándo usarlo?: Siempre que abras Git Bash, antes de ejecutar
+cualquier comando de Git.
+
+Comando:
+  cd "RUTA_DE_TU_CARPETA"
+
+Ejemplos:
+  cd "C:/Users/Oaasis/Desktop/Trabajo-ProfeYesica"
+  cd "C:/Users/Oaasis/Trabajo-ProfeYesica"
+
+
+--------------------------------------------------------------------
+2. DESCARGAR / ACTUALIZAR EL PROYECTO (TRAER CAMBIOS)
+--------------------------------------------------------------------
+¿Cuándo usarlo?:
+- Al empezar a trabajar cada día.
+- Cuando tus compañeros o el profesor hicieron cambios y necesitas 
+  tener la versión más reciente en tu computadora.
+
+Comando:
+  git pull
+
+
+--------------------------------------------------------------------
+3. SUBIR TUS CAMBIOS A GITHUB (EL PROCESO COMPLETO)
+--------------------------------------------------------------------
+¿Cuándo usarlo?: Cuando modificaste archivos o agregaste cosas nuevas
+y quieres que se guarden en GitHub para que todos los vean.
+
+Debes hacer estos 3 pasos EN ORDEN:
+
+PASO A: Seleccionar todos tus archivos modificados
+  git add .
+
+PASO B: Ponerle un mensaje o etiqueta explicativa a tus cambios
+  git commit -m "Escribe aquí qué corregiste o agregaste"
+
+PASO C: Subir los cambios a GitHub
+  git push
+
+
+--------------------------------------------------------------------
+4. REVISAR EL ESTADO DE TUS ARCHIVOS
+--------------------------------------------------------------------
+¿Cuándo usarlo?: Si no estás seguro de qué archivos has cambiado 
+o si te falta hacer commit/push.
+
+Comando:
+  git status
+
+(Te mostrará en rojo los archivos modificados que no se han guardado
+y en verde los que ya están listos para hacer commit).
+
+
+--------------------------------------------------------------------
+5. ABRIR LA CARPETA EN EL EXPLORADOR DE WINDOWS
+--------------------------------------------------------------------
+¿Cuándo usarlo?: Si estás en la terminal y quieres abrir la carpeta 
+gráfica de Windows para ver tus archivos.
+
+Comando:
+  explorer .
+
+
+--------------------------------------------------------------------
+6. CERRAR LA TERMINAL
+--------------------------------------------------------------------
+¿Cuándo usarlo?: Cuando terminaste de trabajar.
+
+Comando:
+  exit
+
+====================================================================
+                  RESUMEN RÁPIDO PARA EL DÍA A DÍA
+====================================================================
+1. Entrar a la carpeta:   cd "RUTA_DE_TU_CARPETA"
+2. Para Descargar:        git pull
+3. Para Subir:            git add .
+                          git commit -m "Mi mensaje"
+                          git push
+====================================================================

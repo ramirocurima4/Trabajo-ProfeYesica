@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filtro &amp; Letras | Café de Especialidad &amp; Literatura</title>
+  <title>Filtro &amp; Letras | Maridaje Literario &amp; Café Casero</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navegación Fija -->
   <header class="site-header">
     <div class="header-container">
-      <a href="#inicio" class="logo">Filtro <span>&amp;</span> Letras</a>
+      <a href="index.html" class="logo">Filtro <span>&amp;</span> Letras</a>
       <nav class="main-nav" aria-label="Navegación principal">
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="index.html" class="nav-activo">Inicio</a></li>
+          <li><a href="catalogo.html" class="nav-destacado">Catálogo ☕📖</a></li>
           <li><a href="#tarjeta">Cita del Día</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li><a href="#creditos">Créditos</a></li>
@@ -23,21 +24,106 @@
   </header>
 
   <!-- Contenido Principal / Sección Hero -->
-  <main id="inicio" class="hero">
-    <div class="hero-intro">
-      <span class="badge">Café de Especialidad &bull; Rincón Literario</span>
-      <h1>Donde cada taza cuenta una historia</h1>
-      <p class="subtitle">Explora nuestra selección de fragmentos literarios mientras disfrutas de un filtrado de origen.</p>
-    </div>
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-intro">
+        <span class="badge">Café de Especialidad &bull; Rincón Literario</span>
+        <h1>Donde cada taza cuenta una historia</h1>
+        <p class="subtitle">Explora nuestra selección de fragmentos literarios mientras disfrutas de un filtrado casero de origen.</p>
+        
+        <!-- CTA Prominente en el Hero -->
+        <div class="hero-cta-wrapper">
+          <a href="catalogo.html" class="btn-cta-hero">
+            Ver Catálogo &amp; Maridajes ☕📖
+          </a>
+        </div>
+      </div>
 
-    <!-- Tarjeta Principal Glassmorphism -->
-    <section id="tarjeta" aria-live="polite">
-      <p id="texto-frase">“El café es el bálsamo del corazón y del espíritu; una pausa escrita con tinta cálida entre las páginas del día.”</p>
-      <p id="autor-frase">— Giuseppe Verdi</p>
+      <!-- Tarjeta Principal Glassmorphism (Cita del Día) -->
+      <section id="tarjeta" aria-live="polite">
+        <p id="texto-frase">“El café es el bálsamo del corazón y del espíritu; una pausa escrita con tinta cálida entre las páginas del día.”</p>
+        <p id="autor-frase">— Giuseppe Verdi</p>
 
-      <div class="acciones-tarjeta">
-        <button id="btn-nueva-frase" type="button">Nueva Frase</button>
-        <button id="btn-cambiar-tema" type="button">Cambiar Tema</button>
+        <div class="acciones-tarjeta">
+          <button id="btn-nueva-frase" type="button">Nueva Frase</button>
+          <button id="btn-cambiar-tema" type="button">Cambiar Tema</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- Sección de Conceptos Clave (Pilares del Proyecto) -->
+    <section class="pilares-section">
+      <div class="pilares-container">
+        <div class="seccion-intro-texto">
+          <span class="badge">Propuesta Conceptual</span>
+          <h2>La Alquimia de Leer y Saborear</h2>
+          <p class="subtitulo-seccion">
+            En <strong>Filtro &amp; Letras</strong> creemos que un gran libro se disfruta con todos los sentidos.
+          </p>
+        </div>
+
+        <div class="pilares-grid">
+          <!-- Pilar 1 -->
+          <article class="pilar-card">
+            <div class="pilar-icono-wrapper">
+              <span>📖✨</span>
+            </div>
+            <h3>1. Maridaje Literario</h3>
+            <p>
+              Combinamos la vibra y el tono emocional de 8 estilos literarios con variedades de café artesanal pensadas para potenciar el ritmo, la tensión o la calidez de tu lectura.
+            </p>
+          </article>
+
+          <!-- Pilar 2 -->
+          <article class="pilar-card">
+            <div class="pilar-icono-wrapper">
+              <span>☕🏠</span>
+            </div>
+            <h3>2. Experiencia Casera</h3>
+            <p>
+              Sin máquinas costosas ni complicaciones. Todas las recetas están explicadas paso a paso con elementos que tienes en casa: jarrito, colador de tela/papel o prensa francesa.
+            </p>
+          </article>
+
+          <!-- Pilar 3 -->
+          <article class="pilar-card">
+            <div class="pilar-icono-wrapper">
+              <span>📂⬇️</span>
+            </div>
+            <h3>3. Biblioteca Libre</h3>
+            <p>
+              Acceso libre y directo a los textos en formato digital. Puedes leer el PDF online en tu navegador o descargarlo a tu dispositivo con un solo clic.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Destacada CTA para ir al Catálogo -->
+    <section class="cta-catalogo-section">
+      <div class="cta-card">
+        <span class="badge">Explora las 8 Vibras</span>
+        <h2>¿Listo para encontrar tu próxima lectura?</h2>
+        <p class="cta-desc">
+          Sumérgete en nuestro catálogo multipágina con más de 20 obras universales, sinopsis breves, descarga de PDFs y 3 recetas caseras detalladas para cada libro.
+        </p>
+
+        <div class="cta-vibras-preview">
+          <span class="vibra-tag">💥 Golpe de Realidad</span>
+          <span class="vibra-tag">🌀 Laberintos Mentales</span>
+          <span class="vibra-tag">☕ Refugio Cálido</span>
+          <span class="vibra-tag">🚀 Escape de la Realidad</span>
+          <span class="vibra-tag">🌙 Sombras y Medianoche</span>
+          <span class="vibra-tag">📜 Ecos del Pasado</span>
+          <span class="vibra-tag">⚡ Chispazo de Conocimiento</span>
+          <span class="vibra-tag">🔥 Pasión y Tensión</span>
+        </div>
+
+        <div class="cta-boton-contenedor">
+          <a href="catalogo.html" class="btn-cta-primario">
+            Ver Catálogo &amp; Maridajes ☕📖 ➔
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -48,7 +134,7 @@
 
       <!-- Columna 1: Identidad & Filosofía -->
       <div class="footer-col footer-brand">
-        <a href="#inicio" class="logo footer-logo">Filtro <span>&amp;</span> Letras</a>
+        <a href="index.html" class="logo footer-logo">Filtro <span>&amp;</span> Letras</a>
         <p class="brand-desc">
           Cafetería de especialidad y espacio cultural. Un refugio donde el grano tostado de origen convive en perfecta armonía con los clásicos de la literatura universal.
         </p>
@@ -125,11 +211,11 @@
       <div class="footer-col footer-links-col">
         <h3 class="footer-title">Rincones del Café</h3>
         <ul class="footer-nav-list">
-          <li><a href="#inicio">✦ Portada Principal</a></li>
+          <li><a href="index.html">✦ Portada Principal</a></li>
+          <li><a href="catalogo.html">✦ Catálogo &amp; 8 Vibras</a></li>
           <li><a href="#tarjeta">✦ Generador de Citas Literarias</a></li>
-          <li><a href="#menu-maridaje" onclick="alert('Sección Menú & Maridaje: Muy pronto disponible en carta digital.'); return false;">✦ Menú &amp; Maridaje de Granos</a></li>
-          <li><a href="#biblioteca" onclick="alert('Biblioteca & Catálogo Literario: Préstamos disponibles en salón.'); return false;">✦ Club de Lectura &amp; Libros</a></li>
-          <li><a href="#talleres" onclick="alert('Talleres de Escritura & Barismo: Inscripciones abiertas el primer sábado de cada mes.'); return false;">✦ Talleres y Noches de Poesía</a></li>
+          <li><a href="catalogo.html">✦ Biblioteca de Libros PDF</a></li>
+          <li><a href="#contacto">✦ Talleres y Contacto</a></li>
         </ul>
 
         <!-- Redes Sociales de la Cafetería -->
@@ -204,7 +290,7 @@
 
     </div>
 
-    <!-- Barra Inferior de Derechos y Accesos Secundarios -->
+    <!-- Barra Inferior de Derechos -->
     <div class="footer-bottom">
       <div class="footer-bottom-container">
         <p class="copyright-text">
@@ -212,11 +298,9 @@
         </p>
 
         <div class="footer-bottom-links">
-          <a href="#privacidad" onclick="alert('Privacidad: Este sitio es una demostración académica y no almacena datos de los usuarios.'); return false;">Política de Privacidad</a>
+          <a href="catalogo.html">Catálogo Completo</a>
           <span class="sep">&bull;</span>
-          <a href="#terminos" onclick="alert('Términos: Contenido literario de uso educativo y recreativo.'); return false;">Términos &amp; Condiciones</a>
-          <span class="sep">&bull;</span>
-          <a href="#libro" onclick="alert('Libro de Sugerencias: ¡Escríbenos a contacto.filtroyletras@gmail.com con tus recomendaciones literarias!'); return false;">Sugerencias Literarias</a>
+          <a href="#inicio">Volver Arriba</a>
         </div>
 
         <a href="#inicio" class="back-to-top" title="Volver al inicio" aria-label="Volver arriba">
