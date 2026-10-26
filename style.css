@@ -288,27 +288,31 @@ h3,
 }
 
 /* ==========================================
-   PIE DE PÁGINA (SITE FOOTER)
+   PIE DE PÁGINA ACADÉMICO (SITE FOOTER ULTRA COMPACTO)
+   - 65% más compacto, sin datos ficticios ni tarjetas pesadas
+   - Distribuido limpiamente directamente sobre el fondo
    ========================================== */
 .site-footer {
   position: relative;
   z-index: 10;
-  margin-top: 4rem;
-  background: rgba(249, 246, 240, 0.88);
+  margin-top: 2rem;
+  background: rgba(249, 246, 240, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-top: 1px solid rgba(227, 213, 202, 0.9);
-  box-shadow: 0 -12px 32px rgba(43, 38, 35, 0.05);
+  box-shadow: 0 -6px 20px rgba(43, 38, 35, 0.03);
   transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
 }
 
 .footer-container {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 4.5rem 1.75rem 3.5rem;
+  /* Espaciado ultra compacto: 1.25rem arriba, 0.75rem abajo */
+  padding: 1.25rem 1.75rem 0.75rem;
   display: grid;
-  grid-template-columns: 1.35fr 1.25fr 1fr 1.35fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.15fr 1.35fr 1.45fr;
+  gap: 2.25rem;
+  align-items: start;
 }
 
 .footer-col {
@@ -316,13 +320,32 @@ h3,
   flex-direction: column;
 }
 
+.footer-logo {
+  margin-bottom: 0.35rem;
+  display: inline-block;
+}
+
+.tp-desc {
+  font-size: 0.81rem;
+  line-height: 1.4;
+  color: var(--texto-secundario);
+  margin-bottom: 0.65rem;
+}
+
+.project-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .footer-title {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  margin-bottom: 1.35rem;
+  margin-bottom: 0.65rem;
   position: relative;
   display: inline-block;
-  padding-bottom: 0.45rem;
+  padding-bottom: 0.25rem;
   letter-spacing: -0.01em;
 }
 
@@ -331,260 +354,28 @@ h3,
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 32px;
-  height: 2.5px;
+  width: 24px;
+  height: 2px;
   background-color: var(--acento-cafe);
   border-radius: 2px;
-}
-
-/* Columna 1: Marca & Horarios */
-.footer-logo {
-  margin-bottom: 1rem;
-}
-
-.brand-desc {
-  font-size: 0.92rem;
-  line-height: 1.65;
-  color: var(--texto-secundario);
-  margin-bottom: 1.5rem;
-}
-
-.footer-hours {
-  background: rgba(227, 213, 202, 0.38);
-  border: 1px solid rgba(213, 189, 175, 0.55);
-  border-radius: 14px;
-  padding: 1rem 1.15rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.hours-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.25rem;
-}
-
-.footer-mini-icon {
-  width: 16px;
-  height: 16px;
-  color: var(--acento-cafe);
-  flex-shrink: 0;
-}
-
-.hours-title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--acento-cafe);
-}
-
-.hours-text {
-  font-size: 0.88rem;
-  color: var(--texto-secundario);
-  font-weight: 500;
-}
-
-/* Columna 2: Contactos */
-.contact-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-}
-
-.contact-icon-wrapper {
-  width: 38px;
-  height: 38px;
-  min-width: 38px;
-  border-radius: 10px;
-  background: rgba(227, 213, 202, 0.55);
-  color: var(--acento-cafe);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.25s ease;
-  border: 1px solid rgba(43, 38, 35, 0.06);
-}
-
-.contact-icon-wrapper svg {
-  width: 18px;
-  height: 18px;
-}
-
-.contact-item:hover .contact-icon-wrapper {
-  background: var(--acento-cafe);
-  color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(140, 98, 57, 0.25);
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.contact-label {
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 700;
-  color: var(--texto-secundario);
-  opacity: 0.85;
-}
-
-.contact-link,
-.contact-address {
-  font-size: 0.92rem;
-  color: var(--texto-principal);
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.4;
-  transition: color 0.2s ease;
-  word-break: break-word;
-}
-
-.contact-link:hover {
-  color: var(--acento-cafe);
-  text-decoration: underline;
-}
-
-/* Columna 3: Enlaces y Redes Sociales */
-.footer-nav-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.footer-nav-list a {
-  text-decoration: none;
-  color: var(--texto-secundario);
-  font-size: 0.92rem;
-  font-weight: 500;
-  display: inline-block;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.footer-nav-list a:hover {
-  color: var(--acento-cafe);
-  transform: translateX(4px);
-}
-
-.footer-social-section {
-  margin-top: 1.65rem;
-  padding-top: 1.25rem;
-  border-top: 1px dashed rgba(227, 213, 202, 0.9);
-}
-
-.social-title {
-  display: block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--texto-secundario);
-  margin-bottom: 0.75rem;
-}
-
-.social-icons-group {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.social-btn {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(227, 213, 202, 0.55);
-  color: var(--texto-principal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border: 1px solid rgba(43, 38, 35, 0.08);
-  transition: all 0.25s ease;
-}
-
-.social-btn svg {
-  width: 18px;
-  height: 18px;
-}
-
-.social-btn:hover {
-  background: var(--acento-cafe);
-  color: #FFFFFF;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(140, 98, 57, 0.25);
-}
-
-/* Columna 4: Créditos Académicos & Creadores */
-.credits-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  border-radius: 18px;
-  padding: 1.35rem 1.4rem;
-  box-shadow: var(--glass-shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  transition: transform 0.25s ease, background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-.credits-card:hover {
-  transform: translateY(-3px);
-}
-
-.academic-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--acento-cafe);
-  background: rgba(140, 98, 57, 0.12);
-  padding: 0.35rem 0.8rem;
-  border-radius: 999px;
-  width: fit-content;
-}
-
-.academic-badge svg {
-  width: 15px;
-  height: 15px;
-  flex-shrink: 0;
 }
 
 .credits-details {
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
+  gap: 0.35rem;
 }
 
 .detail-row {
   display: flex;
   flex-direction: column;
-  gap: 0.12rem;
-  font-size: 0.88rem;
-  line-height: 1.4;
+  gap: 0.05rem;
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
 
 .detail-label {
-  font-size: 0.73rem;
+  font-size: 0.67rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 700;
@@ -597,56 +388,235 @@ h3,
   color: var(--texto-principal);
 }
 
-.highlight-prof,
-.highlight-author {
+.highlight-inst {
   font-weight: 700;
   color: var(--acento-cafe);
 }
 
-.dev-mail-link {
+.tp-value {
+  font-size: 0.76rem;
+  font-weight: 600;
   color: var(--texto-principal);
-  text-decoration: none;
+  line-height: 1.3;
+}
+
+/* ========================================================
+   EFECTOS HOVER SORPRENDENTES: DOCENTE, AUTORES Y ASISTENCIA
+   ======================================================== */
+
+/* Efecto Destacado Sorprendente para Prof. Yésica Ponce */
+.teacher-interactive {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12), rgba(245, 158, 11, 0.08));
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.1);
+  width: fit-content;
+}
+
+.teacher-sparkle {
   font-size: 0.85rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
-  word-break: break-all;
+  display: inline-block;
+  transition: transform 0.35s ease;
 }
 
-.dev-mail-link:hover {
-  color: var(--acento-cafe);
-  text-decoration: underline;
+.teacher-name {
+  font-weight: 700;
+  font-size: 0.82rem;
+  background: linear-gradient(120deg, #8C6239 0%, #B45309 50%, #8C6239 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
 }
 
-.credits-footer {
+/* Estado Hover Asombroso para la Profe */
+.teacher-interactive:hover {
+  transform: translateY(-2px) scale(1.04);
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.28), rgba(236, 72, 153, 0.2));
+  border-color: #F59E0B;
+  box-shadow: 
+    0 8px 20px rgba(245, 158, 11, 0.35),
+    0 0 16px rgba(251, 191, 36, 0.6),
+    inset 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.teacher-interactive:hover .teacher-sparkle {
+  animation: sparkleTwirl 0.8s ease infinite alternate;
+}
+
+.teacher-interactive:hover .teacher-name {
+  background: linear-gradient(90deg, #D97706, #E11D48, #8B5CF6, #3B82F6, #D97706);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShimmer 2.2s linear infinite;
+}
+
+/* Tooltip elegante emergente al pasar el mouse sobre la Profe */
+.teacher-interactive::after {
+  content: "⭐ ¡Docente Guía de Excelencia! Café & Código ☕✨";
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: linear-gradient(135deg, #2B2623, #1A1A1A);
+  color: #FBBF24;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(251, 191, 36, 0.5);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 30;
+}
+
+.teacher-interactive::before {
+  content: "";
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #2B2623 transparent transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 30;
+}
+
+.teacher-interactive:hover::after,
+.teacher-interactive:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+@keyframes rainbowShimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 250% center; }
+}
+
+@keyframes sparkleTwirl {
+  0% { transform: scale(1) rotate(0deg); }
+  100% { transform: scale(1.35) rotate(25deg); }
+}
+
+/* Efectos Interactivos para Autores */
+.authors-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding-top: 0.75rem;
-  border-top: 1px dashed rgba(43, 38, 35, 0.15);
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.author-interactive {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(140, 98, 57, 0.08);
+  border: 1px solid rgba(140, 98, 57, 0.18);
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--texto-principal);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.author-interactive:hover {
+  transform: translateY(-2px);
+  background: rgba(140, 98, 57, 0.18);
+  border-color: var(--acento-cafe);
+  color: var(--acento-cafe);
+  box-shadow: 0 4px 12px rgba(140, 98, 57, 0.25);
+}
+
+/* Efectos Interactivos para Asistencia (Gemini & Antigravity) */
+.assistance-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.ai-interactive {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.76rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.tag-gemini {
+  background: rgba(66, 133, 244, 0.1);
+  border: 1px solid rgba(66, 133, 244, 0.3);
+  color: #1A73E8;
+}
+
+.tag-gemini:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #4285F4, #9B51E0);
+  border-color: #4285F4;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(66, 133, 244, 0.45);
+}
+
+.tag-antigravity {
+  background: rgba(157, 78, 221, 0.1);
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  color: #7B2CBF;
+}
+
+.tag-antigravity:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #7B2CBF, #EC4899);
+  border-color: #EC4899;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(157, 78, 221, 0.45);
 }
 
 .cycle-pill {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--texto-secundario);
   background: rgba(227, 213, 202, 0.45);
-  padding: 0.25rem 0.65rem;
+  padding: 0.18rem 0.5rem;
   border-radius: 6px;
 }
 
 .github-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.78rem;
+  gap: 0.35rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: var(--texto-principal);
   text-decoration: none;
   background: rgba(43, 38, 35, 0.07);
-  padding: 0.3rem 0.7rem;
+  padding: 0.2rem 0.55rem;
   border-radius: 6px;
   transition: all 0.2s ease;
+}
+
+.github-badge svg {
+  width: 13px;
+  height: 13px;
 }
 
 .github-badge:hover {
@@ -654,10 +624,12 @@ h3,
   color: #FFFFFF;
 }
 
-/* Barra Inferior (Footer Bottom) */
+/* ==========================================
+   BARRA INFERIOR (FOOTER BOTTOM & AVISO LEGAL)
+   ========================================== */
 .footer-bottom {
   border-top: 1px solid rgba(227, 213, 202, 0.7);
-  padding: 1.5rem 1.75rem;
+  padding: 0.6rem 1.75rem 0.75rem;
   background: rgba(249, 246, 240, 0.95);
   transition: background-color 0.4s ease, border-color 0.4s ease;
 }
@@ -669,21 +641,21 @@ h3,
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 0.75rem;
 }
 
 .copyright-text {
-  font-size: 0.85rem;
+  font-size: 0.77rem;
   color: var(--texto-secundario);
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .footer-bottom-links {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  font-size: 0.82rem;
+  font-size: 0.77rem;
 }
 
 .footer-bottom-links a {
@@ -705,20 +677,20 @@ h3,
 .back-to-top {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 1rem;
+  gap: 0.3rem;
+  padding: 0.28rem 0.65rem;
   border-radius: 999px;
   background: rgba(227, 213, 202, 0.65);
   color: var(--texto-principal);
   text-decoration: none;
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   font-weight: 700;
   transition: all 0.25s ease;
 }
 
 .back-to-top svg {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 
 .back-to-top:hover {
@@ -726,6 +698,24 @@ h3,
   color: #FFFFFF;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(140, 98, 57, 0.2);
+}
+
+/* Fila de Aviso Legal Solicitada */
+.footer-legal-bar {
+  max-width: 1180px;
+  margin: 0.45rem auto 0;
+  padding-top: 0.45rem;
+  border-top: 1px dashed rgba(227, 213, 202, 0.6);
+  text-align: center;
+}
+
+.footer-legal-text {
+  font-size: 0.73rem;
+  color: var(--texto-secundario);
+  line-height: 1.4;
+  opacity: 0.9;
+  margin: 0 auto;
+  max-width: 960px;
 }
 
 /* ==========================================
@@ -799,89 +789,73 @@ body.modo-oscuro .footer-title::after {
   background-color: #D5C3B5;
 }
 
-body.modo-oscuro .brand-desc,
-body.modo-oscuro .hours-text,
-body.modo-oscuro .contact-label,
+body.modo-oscuro .tp-desc,
 body.modo-oscuro .detail-label,
 body.modo-oscuro .cycle-pill,
 body.modo-oscuro .copyright-text,
-body.modo-oscuro .footer-bottom-links a,
-body.modo-oscuro .social-title {
+body.modo-oscuro .footer-bottom-links a {
   color: #A9A29A;
 }
 
-body.modo-oscuro .footer-hours {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-body.modo-oscuro .hours-title {
-  color: #E3D5CA;
-}
-
-body.modo-oscuro .footer-mini-icon {
-  color: #E3D5CA;
-}
-
-body.modo-oscuro .contact-icon-wrapper {
-  background: rgba(255, 255, 255, 0.06);
-  color: #E3D5CA;
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-body.modo-oscuro .contact-item:hover .contact-icon-wrapper {
-  background: var(--acento-cafe);
-  color: #FFFFFF;
-}
-
-body.modo-oscuro .contact-link,
-body.modo-oscuro .contact-address,
 body.modo-oscuro .detail-value {
   color: #F5F2EB;
 }
 
-body.modo-oscuro .contact-link:hover {
+body.modo-oscuro .highlight-inst {
   color: #E3D5CA;
 }
 
-body.modo-oscuro .footer-nav-list a {
-  color: #C8BFB6;
-}
-
-body.modo-oscuro .footer-nav-list a:hover {
-  color: #E3D5CA;
-}
-
-body.modo-oscuro .footer-social-section {
-  border-top-color: rgba(255, 255, 255, 0.1);
-}
-
-body.modo-oscuro .social-btn {
-  background: rgba(255, 255, 255, 0.06);
+body.modo-oscuro .tp-value {
   color: #F5F2EB;
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-body.modo-oscuro .social-btn:hover {
-  background: var(--acento-cafe);
-  color: #FFFFFF;
-  border-color: var(--acento-cafe);
-}
-
-body.modo-oscuro .credits-card {
-  background: rgba(30, 30, 30, 0.65);
-  border-color: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-}
-
-body.modo-oscuro .academic-badge {
-  background: rgba(227, 213, 202, 0.12);
-  color: #E3D5CA;
 }
 
 body.modo-oscuro .highlight-prof,
 body.modo-oscuro .highlight-author {
   color: #E3D5CA;
+}
+
+body.modo-oscuro .teacher-interactive {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.16), rgba(245, 158, 11, 0.1));
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+body.modo-oscuro .teacher-name {
+  background: linear-gradient(120deg, #FBBF24 0%, #F59E0B 50%, #FBBF24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.modo-oscuro .teacher-interactive:hover {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.35), rgba(236, 72, 153, 0.25));
+  border-color: #FBBF24;
+  box-shadow: 
+    0 8px 24px rgba(245, 158, 11, 0.45),
+    0 0 20px rgba(251, 191, 36, 0.7);
+}
+
+body.modo-oscuro .author-interactive {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #F5F2EB;
+}
+
+body.modo-oscuro .author-interactive:hover {
+  background: rgba(227, 213, 202, 0.15);
+  border-color: #E3D5CA;
+  color: #E3D5CA;
+  box-shadow: 0 4px 14px rgba(227, 213, 202, 0.2);
+}
+
+body.modo-oscuro .tag-gemini {
+  background: rgba(66, 133, 244, 0.18);
+  border-color: rgba(66, 133, 244, 0.45);
+  color: #8AB4F8;
+}
+
+body.modo-oscuro .tag-antigravity {
+  background: rgba(157, 78, 221, 0.18);
+  border-color: rgba(157, 78, 221, 0.45);
+  color: #D8B4FE;
 }
 
 body.modo-oscuro .dev-mail-link {
@@ -924,6 +898,14 @@ body.modo-oscuro .back-to-top {
 body.modo-oscuro .back-to-top:hover {
   background: var(--acento-cafe);
   color: #FFFFFF;
+}
+
+body.modo-oscuro .footer-legal-bar {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+body.modo-oscuro .footer-legal-text {
+  color: #A9A29A;
 }
 
 /* ==========================================
@@ -1826,7 +1808,7 @@ body.modo-oscuro .btn-reset:hover {
 .catalogo-page-container {
   position: relative;
   z-index: 1;
-  max-width: 1220px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 7.5rem 1.75rem 6rem;
   display: flex;
@@ -1848,34 +1830,34 @@ body.modo-oscuro .btn-reset:hover {
   padding-top: 0.5rem;
 }
 
-/* Grilla del Catálogo */
+/* Grilla del Catálogo: Exactamente 4 tarjetas por fila en escritorio */
 .grid-catalogo {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 2.25rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
   align-items: stretch;
 }
 
-/* Tarjeta Sencilla y no saturada del Catálogo */
+/* Tarjeta de Catálogo Compacta y Estilizada */
 .catalogo-card {
   position: relative;
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
-  border-radius: 22px;
-  padding: 1.85rem 1.65rem;
-  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+  padding: 1.15rem 1.1rem;
+  box-shadow: 0 8px 24px rgba(43, 38, 35, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.35rem;
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  gap: 0.85rem;
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
 .catalogo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 50px rgba(43, 38, 35, 0.16), 0 8px 18px rgba(43, 38, 35, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(43, 38, 35, 0.12), 0 4px 12px rgba(43, 38, 35, 0.05);
   border-color: rgba(140, 98, 57, 0.35);
 }
 
@@ -1883,59 +1865,72 @@ body.modo-oscuro .btn-reset:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .portada-emblema {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   background: rgba(227, 213, 202, 0.55);
   border: 1px solid rgba(140, 98, 57, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   position: relative;
+  flex-shrink: 0;
 }
 
 .emblema-cafe {
-  font-size: 0.85rem;
+  font-size: 0.72rem;
   position: absolute;
-  bottom: 2px;
-  right: 2px;
+  bottom: 1px;
+  right: 1px;
 }
 
 .card-categoria-tag {
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: var(--acento-cafe);
   background: rgba(227, 213, 202, 0.45);
   border: 1px solid rgba(140, 98, 57, 0.15);
-  padding: 0.3rem 0.75rem;
+  padding: 0.22rem 0.55rem;
   border-radius: 999px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 72%;
 }
 
 .card-info {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
   flex-grow: 1;
 }
 
 .card-titulo {
-  font-size: 1.4rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.28;
   color: var(--texto-principal);
   letter-spacing: -0.01em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.65rem;
 }
 
 .card-autor {
-  font-size: 0.92rem;
+  font-size: 0.8rem;
   color: var(--texto-secundario);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-autor strong {
@@ -1943,21 +1938,21 @@ body.modo-oscuro .btn-reset:hover {
 }
 
 .card-resumen {
-  font-size: 0.94rem;
-  line-height: 1.6;
+  font-size: 0.8rem;
+  line-height: 1.45;
   color: var(--texto-secundario);
-  margin-top: 0.35rem;
-}
-
-.card-footer-acciones {
-  margin-top: 0.5rem;
+  margin-top: 0.15rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Fila de botones de lectura y descarga */
 .card-botones-lectura {
   display: flex;
-  gap: 0.65rem;
-  margin-top: 0.5rem;
+  gap: 0.45rem;
+  margin-top: auto;
 }
 
 .btn-card-accion {
@@ -1965,13 +1960,13 @@ body.modo-oscuro .btn-reset:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
+  gap: 0.35rem;
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.74rem;
   font-weight: 700;
   text-decoration: none;
-  padding: 0.75rem 0.65rem;
-  border-radius: 12px;
+  padding: 0.48rem 0.4rem;
+  border-radius: 8px;
   transition: all 0.25s ease;
   text-align: center;
   white-space: nowrap;
@@ -1981,148 +1976,409 @@ body.modo-oscuro .btn-reset:hover {
   background: var(--btn-arena);
   color: var(--texto-principal);
   border: 1px solid rgba(43, 38, 35, 0.12);
-  box-shadow: 0 4px 10px rgba(43, 38, 35, 0.04);
 }
 
 .btn-leer-online:hover {
   background: var(--btn-arena-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(43, 38, 35, 0.1);
+  box-shadow: 0 4px 10px rgba(43, 38, 35, 0.1);
 }
 
 .btn-descargar-pdf {
   background: var(--acento-cafe);
   color: #FFFFFF;
   border: 1px solid var(--acento-cafe);
-  box-shadow: 0 4px 12px rgba(140, 98, 57, 0.25);
+  box-shadow: 0 3px 8px rgba(140, 98, 57, 0.22);
 }
 
 .btn-descargar-pdf:hover {
   background: var(--acento-cafe-hover);
   color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(140, 98, 57, 0.35);
+  box-shadow: 0 6px 14px rgba(140, 98, 57, 0.35);
 }
 
-/* Acordeón de Maridaje de Café en la tarjeta */
-.maridaje-acordeon {
-  border-top: 1px dashed rgba(140, 98, 57, 0.25);
-  padding-top: 0.85rem;
-  margin-top: 0.5rem;
-}
-
-.btn-ver-maridaje {
+/* Botón Ver Maridaje (Abre la ventana emergente modal) */
+.btn-card-maridaje {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  cursor: pointer;
-  padding: 0.7rem 1rem;
-  border-radius: 12px;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.52rem 0.75rem;
+  border-radius: 9px;
   background: rgba(227, 213, 202, 0.55);
   color: var(--acento-cafe);
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   font-weight: 700;
+  border: 1px solid rgba(140, 98, 57, 0.22);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(43, 38, 35, 0.04);
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  margin-top: 0.2rem;
+}
+
+.btn-card-maridaje:hover {
+  background: var(--acento-cafe);
+  color: #FFFFFF;
+  border-color: var(--acento-cafe);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(140, 98, 57, 0.25);
+}
+
+.btn-maridaje-icono {
+  font-size: 0.92rem;
+}
+
+/* ==========================================
+   VENTANA EMERGENTE DE MARIDAJE (MODAL)
+   ========================================== */
+.modal-maridaje-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+}
+
+.modal-maridaje-wrapper.activo {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Fondo oscuro desenfocado con backdrop-filter: blur(10px) */
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 11, 9, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+/* Diálogo contenedor del Modal con animación de entrada suave */
+.modal-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1040px;
+  max-height: 88vh;
+  background: #FFFDFB;
+  border: 1px solid rgba(140, 98, 57, 0.22);
+  border-radius: 22px;
+  box-shadow: 0 30px 80px rgba(15, 12, 10, 0.45), 0 10px 25px rgba(15, 12, 10, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.93) translateY(24px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.modal-maridaje-wrapper.activo .modal-container {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Botón de cierre 'X' */
+.modal-btn-cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1.15rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   border: 1px solid rgba(140, 98, 57, 0.2);
-  box-shadow: 0 2px 8px rgba(43, 38, 35, 0.04);
-  transition: all 0.25s ease;
-  user-select: none;
+  background: rgba(227, 213, 202, 0.45);
+  color: var(--texto-principal);
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
 }
 
-.btn-ver-maridaje::-webkit-details-marker {
-  display: none;
+.modal-btn-cerrar:hover {
+  background: var(--acento-cafe);
+  color: #FFFFFF;
+  border-color: var(--acento-cafe);
+  transform: rotate(90deg) scale(1.08);
 }
 
-.btn-ver-maridaje:hover {
-  background: var(--btn-arena);
-  transform: translateY(-1px);
+/* Interior del modal dividido en dos: Izquierda (Libro) y Derecha (Recetas) */
+.modal-grid-split {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  overflow-y: auto;
+  max-height: 88vh;
+}
+
+/* Columna Izquierda: Portada e Información del Libro */
+.modal-col-libro {
+  background: linear-gradient(165deg, rgba(227, 213, 202, 0.4) 0%, rgba(227, 213, 202, 0.12) 100%);
+  border-right: 1px solid rgba(140, 98, 57, 0.15);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+}
+
+.modal-libro-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.modal-portada-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: rgba(227, 213, 202, 0.7);
+  border: 1px solid rgba(140, 98, 57, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
   box-shadow: 0 4px 12px rgba(140, 98, 57, 0.12);
+  flex-shrink: 0;
 }
 
-.summary-flecha {
-  font-size: 1rem;
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+.modal-cat-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--acento-cafe);
+  background: rgba(227, 213, 202, 0.5);
+  border: 1px solid rgba(140, 98, 57, 0.2);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
 }
 
-.maridaje-acordeon[open] .summary-flecha {
-  transform: rotate(180deg);
+.modal-libro-titulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--texto-principal);
+  letter-spacing: -0.01em;
+  margin-top: 0.2rem;
 }
 
-.maridaje-recetas-desplegadas {
+.modal-libro-autor {
+  font-size: 0.92rem;
+  color: var(--texto-secundario);
+}
+
+.modal-libro-autor strong {
+  color: var(--acento-cafe);
+}
+
+.modal-libro-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(140, 98, 57, 0.25) 0%, transparent 100%);
+  margin: 0.25rem 0;
+}
+
+.modal-libro-sinopsis {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--texto-secundario);
+}
+
+.modal-libro-acciones {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-acciones-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--acento-cafe);
+}
+
+.modal-acciones-grid {
+  display: flex;
+  gap: 0.55rem;
+}
+
+.modal-acciones-grid .btn-card-accion {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.82rem;
+  border-radius: 9px;
+}
+
+.modal-libro-nota {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--texto-secundario);
+  background: rgba(227, 213, 202, 0.25);
+  border-left: 3px solid var(--acento-cafe);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 8px 8px 0;
+  margin-top: 0.35rem;
+}
+
+/* Columna Derecha: Tarjetas Minimalistas para las 3 Recetas */
+.modal-col-recetas {
+  padding: 2.25rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
-  margin-top: 1rem;
-  animation: fadeIn 0.3s ease;
 }
 
-.maridaje-intro-nota {
-  font-size: 0.82rem;
+.modal-recetas-cabecera {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-bottom: 1px solid rgba(140, 98, 57, 0.12);
+  padding-bottom: 0.85rem;
+}
+
+.modal-recetas-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--acento-cafe);
+}
+
+.modal-recetas-titulo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--texto-principal);
+}
+
+.modal-recetas-sub {
+  font-size: 0.84rem;
   color: var(--texto-secundario);
-  text-align: center;
-  padding: 0.25rem 0.5rem;
 }
 
-/* Tarjeta individual de receta en el catálogo */
-.cafe-receta-item {
-  background: rgba(227, 213, 202, 0.35);
-  border: 1px solid rgba(140, 98, 57, 0.2);
-  border-radius: 16px;
-  padding: 1.15rem 1.25rem;
+.modal-recetas-lista {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  transition: background-color 0.25s ease;
+  gap: 0.95rem;
 }
 
-.cafe-receta-item:hover {
-  background: rgba(227, 213, 202, 0.5);
-}
-
-.cafe-receta-header {
+/* Tarjeta Minimalista de Receta */
+.receta-minimal-card {
+  background: rgba(227, 213, 202, 0.25);
+  border: 1px solid rgba(140, 98, 57, 0.16);
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.7rem;
+  transition: all 0.25s ease;
 }
 
-.cafe-receta-num {
-  font-size: 0.7rem;
+.receta-minimal-card:hover {
+  background: rgba(227, 213, 202, 0.42);
+  border-color: rgba(140, 98, 57, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(43, 38, 35, 0.06);
+}
+
+.receta-minimal-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.receta-minimal-tag {
+  font-size: 0.68rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--acento-cafe);
 }
 
-.cafe-receta-titulo {
-  font-family: 'DM Sans', sans-serif;
+.receta-minimal-nombre {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--texto-principal);
 }
 
-.cafe-receta-notas {
-  font-size: 0.84rem;
+.receta-minimal-notas {
+  font-size: 0.82rem;
   line-height: 1.45;
   color: var(--texto-secundario);
 }
 
-.cafe-receta-cuerpo {
+.receta-minimal-body {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  border-top: 1px solid rgba(140, 98, 57, 0.12);
-  padding-top: 0.75rem;
+  gap: 0.65rem;
+  border-top: 1px dashed rgba(140, 98, 57, 0.15);
+  padding-top: 0.65rem;
 }
 
-.cafe-bloque-label {
-  display: block;
-  font-size: 0.76rem;
+.receta-minimal-label {
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: var(--acento-cafe);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.receta-pills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.receta-pill {
+  font-size: 0.76rem;
+  background: rgba(140, 98, 57, 0.08);
+  border: 1px solid rgba(140, 98, 57, 0.14);
+  color: var(--texto-principal);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.receta-pasos-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--texto-secundario);
+}
+
+.receta-pasos-list li {
+  margin-bottom: 0.25rem;
+}
+
+.receta-pasos-list li::marker {
+  color: var(--acento-cafe);
+  font-weight: 700;
+}
+
+/* Bloqueo de scroll cuando el modal está abierto */
+body.modal-abierto {
+  overflow: hidden;
 }
 
 /* ==========================================
@@ -2592,51 +2848,93 @@ body.modo-oscuro .card-autor strong {
   color: #E3D5CA;
 }
 
-body.modo-oscuro .btn-ver-maridaje {
-  background: rgba(227, 213, 202, 0.12);
-  color: #E3D5CA;
-  border-color: rgba(227, 213, 202, 0.2);
+body.modo-oscuro .btn-card-maridaje {
+  background: rgba(227, 213, 202, 0.08);
+  color: var(--crema-suave);
+  border-color: rgba(227, 213, 202, 0.16);
 }
 
-body.modo-oscuro .btn-ver-maridaje:hover {
-  background: rgba(227, 213, 202, 0.2);
+body.modo-oscuro .btn-card-maridaje:hover {
+  background: var(--acento-cafe);
+  color: #FFFFFF;
+  border-color: var(--acento-cafe);
+}
+
+body.modo-oscuro .modal-container {
+  background: #1B1715;
+  border-color: rgba(227, 213, 202, 0.16);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+body.modo-oscuro .modal-btn-cerrar {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #F5EBE1;
+}
+
+body.modo-oscuro .modal-btn-cerrar:hover {
+  background: var(--acento-cafe);
   color: #FFFFFF;
 }
 
-body.modo-oscuro .maridaje-acordeon {
-  border-top-color: rgba(255, 255, 255, 0.1);
+body.modo-oscuro .modal-col-libro {
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border-right-color: rgba(255, 255, 255, 0.08);
 }
 
-body.modo-oscuro .maridaje-intro-nota {
-  color: #A9A29A;
+body.modo-oscuro .modal-portada-box {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
-body.modo-oscuro .cafe-receta-item {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-body.modo-oscuro .cafe-receta-item:hover {
-  background: rgba(255, 255, 255, 0.07);
-}
-
-body.modo-oscuro .cafe-receta-num {
-  color: #E3D5CA;
-}
-
-body.modo-oscuro .cafe-receta-titulo {
+body.modo-oscuro .modal-libro-titulo {
   color: #F5F2EB;
 }
 
-body.modo-oscuro .cafe-receta-notas {
+body.modo-oscuro .modal-libro-autor,
+body.modo-oscuro .modal-libro-sinopsis {
   color: #C8BFB6;
 }
 
-body.modo-oscuro .cafe-receta-cuerpo {
-  border-top-color: rgba(255, 255, 255, 0.08);
+body.modo-oscuro .modal-libro-nota {
+  background: rgba(255, 255, 255, 0.04);
+  color: #C8BFB6;
 }
 
-body.modo-oscuro .cafe-bloque-label {
+body.modo-oscuro .modal-recetas-cabecera {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.modo-oscuro .modal-recetas-titulo {
+  color: #F5F2EB;
+}
+
+body.modo-oscuro .modal-recetas-sub {
+  color: #A9A29A;
+}
+
+body.modo-oscuro .receta-minimal-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.modo-oscuro .receta-minimal-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(140, 98, 57, 0.35);
+}
+
+body.modo-oscuro .receta-minimal-nombre {
+  color: #F5F2EB;
+}
+
+body.modo-oscuro .receta-minimal-notas,
+body.modo-oscuro .receta-pasos-list {
+  color: #C8BFB6;
+}
+
+body.modo-oscuro .receta-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
   color: #E3D5CA;
 }
 
@@ -2729,7 +3027,19 @@ body.modo-oscuro .receta-badge-num {
 /* ==========================================
    RESPONSIVIDAD (MEDIA QUERIES ACTUALIZADAS)
    ========================================== */
+@media (max-width: 1200px) {
+  .grid-catalogo {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+  }
+}
+
 @media (max-width: 1024px) {
+  .grid-catalogo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem;
+  }
+
   .pilares-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -2745,8 +3055,25 @@ body.modo-oscuro .receta-badge-num {
   }
 
   .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .modal-grid-split {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-col-libro {
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid rgba(140, 98, 57, 0.15);
+    padding: 1.75rem 1.35rem 1.5rem;
+  }
+
+  .modal-col-recetas {
+    padding: 1.5rem 1.35rem 1.75rem;
   }
 }
 
@@ -2816,14 +3143,14 @@ body.modo-oscuro .receta-badge-num {
 
   .footer-container {
     grid-template-columns: 1fr;
-    gap: 2.75rem;
-    padding: 3.5rem 1.25rem 2.5rem;
+    gap: 1.25rem;
+    padding: 1.25rem 1rem 0.75rem;
   }
 
   .footer-bottom-container {
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
+    gap: 0.6rem;
   }
 
   .footer-bottom-links {

@@ -1,42 +1,95 @@
 /**
  * Filtro & Letras - Cafetería Literaria & Maridaje de Lectura y Café Casero
- * Cátedra: Laboratorio de Programación (Tecnicatura en Desarrollo de Software - Prof. Yesica)
- * Desarrollado por Ramiro Curima y equipo
+ * Cátedra: Laboratorio de Programación I (Tecnicatura en Desarrollo de Software - Prof. Yésica Ponce)
+ * Desarrollado por Ramiro Curimá & Sebastián Gauna
+ * Asistencia: Gemini & Antigravity
  */
 
 // ==========================================
 // 1. CONSIGNAS OFICIALES DEL TP (LÓGICA BASE)
 // ==========================================
 
-// Array de objetos con frases literarias y sus respectivos autores
+// Array de objetos con 20 frases literarias extraídas exclusivamente de los libros del catálogo
 const frasesLiterarias = [
   {
-    texto: "“Siempre imaginé que el Paraíso sería algún tipo de biblioteca.”",
-    autor: "Jorge Luis Borges"
+    texto: "“He aquí mi secreto, que no puede ser más simple: solo con el corazón se puede ver bien; lo esencial es invisible a los ojos.”",
+    autor: "Antoine de Saint-Exupéry (El Principito)"
   },
   {
-    texto: "“Andábamos sin buscarnos, pero sabiendo que andábamos para encontrarnos.”",
-    autor: "Julio Cortázar"
+    texto: "“Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insecto.”",
+    autor: "Franz Kafka (La metamorfosis)"
   },
   {
-    texto: "“Uno no es lo que es por lo que escribe, sino por lo que ha leído.”",
-    autor: "Jorge Luis Borges"
+    texto: "“El número de páginas de este libro es exactamente infinito. Ninguna es la primera; ninguna, la última.”",
+    autor: "Jorge Luis Borges (El libro de arena)"
   },
   {
-    texto: "“La memoria del corazón elimina los malos recuerdos y magnifica los buenos.”",
-    autor: "Gabriel García Márquez"
+    texto: "“¡Dios mío! ¡Un minuto entero de felicidad! ¿Acaso es poco para toda una vida humana?”",
+    autor: "Fyodor Dostoyevsky (Noches blancas)"
   },
   {
-    texto: "“Escribir es una manera de hablar sin ser interrumpido.”",
-    autor: "Jules Renard"
+    texto: "“De lo que sea que estén hechas nuestras almas, la suya y la mía son iguales.”",
+    autor: "Emily Brontë (Cumbres Borrascosas)"
   },
   {
-    texto: "“El café nos hace serios, graves y filosóficos.”",
-    autor: "Jonathan Swift"
+    texto: "“Pero yo no quiero la comodidad. Quiero la poesía, quiero el peligro verdadero, quiero la libertad, quiero la bondad.”",
+    autor: "Aldous Huxley (Un mundo feliz)"
   },
   {
-    texto: "“Un libro debe ser el hacha que rompa el mar helado dentro de nosotros.”",
-    autor: "Franz Kafka"
+    texto: "“El mar no pertenece a los déspotas. En su superficie todavía pueden ejercer derechos inicuos, pero a treinta pies por debajo su poder cesa.”",
+    autor: "Julio Verne (20.000 leguas de viaje submarino)"
+  },
+  {
+    texto: "“El hombre no es verdaderamente uno, sino verdaderamente dos.”",
+    autor: "Robert Louis Stevenson (El extraño caso del Dr. Jekyll y Mr. Hyde)"
+  },
+  {
+    texto: "“Y mi alma, del fondo de esa sombra que yace flotando en el suelo, no podrá elevarse nunca más... ¡Nunca más!”",
+    autor: "Edgar Allan Poe (El cuervo y otros poemas)"
+  },
+  {
+    texto: "“El amor es lo único que nos hace mirar al futuro con esperanza y al pasado sin remordimientos.”",
+    autor: "Alexandre Dumas hijo (La dama de las camelias)"
+  },
+  {
+    texto: "“Cuando se ha eliminado todo lo imposible, lo que queda, por improbable que parezca, debe ser la verdad.”",
+    autor: "Arthur Conan Doyle (Estudio en escarlata)"
+  },
+  {
+    texto: "“No hay nada más difícil de emprender, ni más dudoso de hacer triunfar, que introducir un nuevo orden de cosas.”",
+    autor: "Nicolás Maquiavelo (El Príncipe)"
+  },
+  {
+    texto: "“¿No es maravilloso pensar que mañana es un nuevo día en el que todavía no se han cometido errores?”",
+    autor: "Lucy Maud Montgomery (Ana de las Tejas Verdes)"
+  },
+  {
+    texto: "“No hay diferencia entre el Tiempo y las dimensiones del Espacio, salvo que nuestra conciencia se mueve a lo largo de él.”",
+    autor: "H.G. Wells (La máquina del tiempo)"
+  },
+  {
+    texto: "“Esta penumbra es lenta y no duele; fluye por una mansa pendiente y se parece a la eternidad.”",
+    autor: "Jorge Luis Borges (Elogio de la sombra)"
+  },
+  {
+    texto: "“Podía sentir mi corazón latiendo. Podía sentir el corazón de todos. Podía sentir la vulnerabilidad humana flotando en la habitación.”",
+    autor: "Raymond Carver (De qué hablamos cuando hablamos de amor)"
+  },
+  {
+    texto: "“Por la mañana era de mañana y yo todavía estaba vivo. Quizá escribiría una novela, pensé. Y luego lo hice.”",
+    autor: "Charles Bukowski (Cartero)"
+  },
+  {
+    texto: "“Dondequiera que las cosas se juzguen por el dinero, difícilmente podrá conseguirse que la república se administre con justicia.”",
+    autor: "Tomás Moro (Utopía)"
+  },
+  {
+    texto: "“Como el linaje de las hojas, tal es el de los hombres. El viento las esparce por el suelo, y el bosque vuelve a brotar en primavera.”",
+    autor: "Homero (La Ilíada)"
+  },
+  {
+    texto: "“La mente humana es como una pequeña buhardilla vacía: hay que llenarla con los muebles que uno elija con cuidado.”",
+    autor: "Arthur Conan Doyle (El signo de los cuatro)"
   }
 ];
 
@@ -476,8 +529,8 @@ const librosBD = [
     autor: "Arthur Conan Doyle",
     categoria: "laberintos-mentales",
     categoriaNombre: "🌀 Laberintos Mentales",
-    resumenCorto: "Tesoros robados, pactos secretos y un enigma deductivo fascinante.",
-    sinopsis: "Mary Morstan recurre a Holmes y Watson tras recibir misteriosas perlas de un remitente anónimo vinculado al tesoro de Agra.",
+    resumenCorto: "Aventura clásica de Sherlock Holmes: tesoros de la India, pactos secretos y un enigma fascinante.",
+    sinopsis: "Mary Morstan recurre al detective Sherlock Holmes y al Dr. John Watson tras recibir misteriosas perlas vinculadas al tesoro de Agra, arrastrándolos a un laberinto de venganza y pactos secretos.",
     pdfRuta: "./libros/Sherlock-Holmes-02-El-signo-d-Conan-Doyle-Arthur.pdf",
     cafes: [
       {
@@ -1085,77 +1138,203 @@ function inicializarSeccionCatalogo() {
       return;
     }
 
-    // Renderizado de tarjetas completas con lectura, descarga y maridaje de café
+    // Renderizado de tarjetas compactas y estilizadas (sin details, con modal emergente)
     contenedor.innerHTML = libros.map(libro => {
-      // 3 recetas de café casero explicadas paso a paso
-      const recetasHTML = libro.cafes.map((cafe, i) => `
-        <div class="cafe-receta-item">
-          <div class="cafe-receta-header">
-            <span class="cafe-receta-num">Opción #${i + 1}</span>
-            <h5 class="cafe-receta-titulo">${sanitizarHTML(cafe.nombre)}</h5>
-            <p class="cafe-receta-notas"><strong>✨ Maridaje:</strong> ${sanitizarHTML(cafe.notas)}</p>
-          </div>
-          <div class="cafe-receta-cuerpo">
-            <div class="cafe-bloque-ingredientes">
-              <span class="cafe-bloque-label">🛒 Ingredientes caseros:</span>
-              <ul class="lista-ingredientes">
-                ${cafe.ingredientes.map(ing => `<li>${sanitizarHTML(ing)}</li>`).join("")}
-              </ul>
-            </div>
-            <div class="cafe-bloque-pasos">
-              <span class="cafe-bloque-label">👨‍🍳 Guía de preparación casera:</span>
-              <ol class="lista-pasos">
-                ${cafe.pasoAPaso.map(paso => `<li>${sanitizarHTML(paso)}</li>`).join("")}
-              </ol>
-            </div>
-          </div>
-        </div>
-      `).join("");
+      const rutaSegura = encodeURI(libro.pdfRuta);
 
       return `
-        <article class="catalogo-card" data-categoria="${sanitizarHTML(libro.categoria)}">
+        <article class="catalogo-card" data-categoria="${sanitizarHTML(libro.categoria)}" data-libro-id="${sanitizarHTML(libro.id)}">
           <!-- Portada e información principal -->
           <div class="card-portada-visual">
             <div class="portada-emblema">
               <span class="emblema-icono">📖</span>
               <span class="emblema-cafe">☕</span>
             </div>
-            <span class="card-categoria-tag">${sanitizarHTML(libro.categoriaNombre)}</span>
+            <span class="card-categoria-tag" title="${sanitizarHTML(libro.categoriaNombre)}">${sanitizarHTML(libro.categoriaNombre)}</span>
           </div>
 
           <div class="card-info">
-            <h3 class="card-titulo">${sanitizarHTML(libro.titulo)}</h3>
+            <h3 class="card-titulo" title="${sanitizarHTML(libro.titulo)}">${sanitizarHTML(libro.titulo)}</h3>
             <p class="card-autor">Por <strong>${sanitizarHTML(libro.autor)}</strong></p>
             <p class="card-resumen">${sanitizarHTML(libro.resumenCorto)}</p>
           </div>
 
           <!-- Botones de Acción de Lectura y Descarga -->
           <div class="card-botones-lectura">
-            <a href="${sanitizarHTML(libro.pdfRuta)}" target="_blank" rel="noopener noreferrer" class="btn-card-accion btn-leer-online">
-              📖 Leer Online
+            <a href="${rutaSegura}" target="_blank" rel="noopener noreferrer" class="btn-card-accion btn-leer-online">
+              📖 Leer
             </a>
-            <a href="${sanitizarHTML(libro.pdfRuta)}" download class="btn-card-accion btn-descargar-pdf">
-              ⬇️ Descargar PDF
+            <a href="${rutaSegura}" download class="btn-card-accion btn-descargar-pdf">
+              ⬇️ Descargar
             </a>
           </div>
 
-          <!-- Desplegable con las 3 Recetas de Café Maridado -->
-          <details class="maridaje-acordeon">
-            <summary class="btn-ver-maridaje">
-              <span class="summary-txt">☕ Ver Maridaje de Café (3 Recetas)</span>
-              <span class="summary-flecha" aria-hidden="true">▾</span>
-            </summary>
-            <div class="maridaje-recetas-desplegadas">
-              <p class="maridaje-intro-nota">
-                💡 <em>Cafés ideales para preparar en casa con jarrito, colador o prensa:</em>
-              </p>
-              ${recetasHTML}
-            </div>
-          </details>
+          <!-- Botón de apertura de Modal de Maridaje (Reemplaza a details) -->
+          <button type="button" class="btn-card-maridaje" data-libro-id="${sanitizarHTML(libro.id)}" aria-haspopup="dialog">
+            <span class="btn-maridaje-icono">☕</span>
+            <span class="btn-maridaje-txt">Ver Maridaje (3 Recetas)</span>
+          </button>
         </article>
       `;
     }).join("");
   }
+
+  // ==========================================
+  // LÓGICA DE LA VENTANA EMERGENTE DE MARIDAJE (MODAL)
+  // ==========================================
+  function abrirModalMaridaje(libroId) {
+    const libro = librosBD.find(l => l.id === libroId);
+    if (!libro) return;
+
+    let modal = document.getElementById("modal-maridaje");
+    let contenido = document.getElementById("modal-contenido-dinamico");
+
+    // Creación defensiva si el contenedor no existe en el DOM
+    if (!modal) {
+      modal = document.createElement("div");
+      modal.id = "modal-maridaje";
+      modal.className = "modal-maridaje-wrapper";
+      modal.setAttribute("aria-hidden", "true");
+      modal.setAttribute("role", "dialog");
+      modal.setAttribute("aria-modal", "true");
+      modal.setAttribute("aria-labelledby", "modal-libro-titulo");
+      modal.innerHTML = `
+        <div class="modal-backdrop" id="modal-backdrop" tabindex="-1"></div>
+        <div class="modal-container">
+          <button type="button" id="btn-cerrar-modal" class="modal-btn-cerrar" aria-label="Cerrar ventana de maridaje">&times;</button>
+          <div id="modal-contenido-dinamico" class="modal-grid-split"></div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      contenido = document.getElementById("modal-contenido-dinamico");
+      vincularEventosModal();
+    }
+
+    const rutaSegura = encodeURI(libro.pdfRuta);
+
+    // Renderizado de las 3 recetas minimalistas para la columna derecha
+    const recetasMinimalistasHTML = libro.cafes.map((cafe, i) => `
+      <div class="receta-minimal-card">
+        <div class="receta-minimal-top">
+          <span class="receta-minimal-tag">Opción #${i + 1} &bull; Maridaje</span>
+          <h4 class="receta-minimal-nombre">${sanitizarHTML(cafe.nombre)}</h4>
+          <p class="receta-minimal-notas"><strong>✨ Notas sensoriales:</strong> ${sanitizarHTML(cafe.notas)}</p>
+        </div>
+        <div class="receta-minimal-body">
+          <div>
+            <span class="receta-minimal-label">🛒 Ingredientes caseros:</span>
+            <ul class="receta-pills-list">
+              ${cafe.ingredientes.map(ing => `<li class="receta-pill">${sanitizarHTML(ing)}</li>`).join("")}
+            </ul>
+          </div>
+          <div>
+            <span class="receta-minimal-label">👨‍🍳 Preparación en casa:</span>
+            <ol class="receta-pasos-list">
+              ${cafe.pasoAPaso.map(paso => `<li>${sanitizarHTML(paso)}</li>`).join("")}
+            </ol>
+          </div>
+        </div>
+      </div>
+    `).join("");
+
+    contenido.innerHTML = `
+      <!-- Columna Izquierda: Portada e Información del Libro -->
+      <div class="modal-col-libro">
+        <div class="modal-libro-badge-row">
+          <div class="modal-portada-box">
+            <span>📖</span>
+          </div>
+          <span class="modal-cat-tag">${sanitizarHTML(libro.categoriaNombre)}</span>
+        </div>
+
+        <h2 class="modal-libro-titulo" id="modal-libro-titulo">${sanitizarHTML(libro.titulo)}</h2>
+        <p class="modal-libro-autor">Por <strong>${sanitizarHTML(libro.autor)}</strong></p>
+        
+        <div class="modal-libro-divider"></div>
+        
+        <p class="modal-libro-sinopsis">
+          ${sanitizarHTML(libro.sinopsis || libro.resumenCorto)}
+        </p>
+
+        <div class="modal-libro-acciones">
+          <span class="modal-acciones-label">Lectura de la obra:</span>
+          <div class="modal-acciones-grid">
+            <a href="${rutaSegura}" target="_blank" rel="noopener noreferrer" class="btn-card-accion btn-leer-online">
+              📖 Leer Online
+            </a>
+            <a href="${rutaSegura}" download class="btn-card-accion btn-descargar-pdf">
+              ⬇️ Descargar PDF
+            </a>
+          </div>
+        </div>
+
+        <div class="modal-libro-nota">
+          ☕ <em>Cada taza fue seleccionada para complementar la atmósfera emocional, filosófica y estilística de esta obra universal.</em>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Tarjetas Minimalistas de las 3 Recetas -->
+      <div class="modal-col-recetas">
+        <div class="modal-recetas-cabecera">
+          <span class="modal-recetas-badge">☕ Carta de Maridajes Caseros</span>
+          <h3 class="modal-recetas-titulo">3 Recetas Artesanales</h3>
+          <p class="modal-recetas-sub">Preparaciones sencillas para disfrutar en casa con jarrito, prensa o filtro.</p>
+        </div>
+
+        <div class="modal-recetas-lista">
+          ${recetasMinimalistasHTML}
+        </div>
+      </div>
+    `;
+
+    modal.classList.add("activo");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-abierto");
+
+    const btnCerrar = document.getElementById("btn-cerrar-modal");
+    if (btnCerrar) {
+      btnCerrar.focus();
+    }
+  }
+
+  function cerrarModalMaridaje() {
+    const modal = document.getElementById("modal-maridaje");
+    if (!modal) return;
+    modal.classList.remove("activo");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-abierto");
+  }
+
+  function vincularEventosModal() {
+    const btnCerrar = document.getElementById("btn-cerrar-modal");
+    if (btnCerrar) {
+      btnCerrar.onclick = cerrarModalMaridaje;
+    }
+    const backdrop = document.getElementById("modal-backdrop");
+    if (backdrop) {
+      backdrop.onclick = cerrarModalMaridaje;
+    }
+  }
+
+  // Delegación de eventos para el botón 'Ver Maridaje' en las tarjetas
+  contenedor.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn-card-maridaje");
+    if (btn) {
+      const libroId = btn.dataset.libroId;
+      if (libroId) {
+        abrirModalMaridaje(libroId);
+      }
+    }
+  });
+
+  // Cerrar modal al presionar tecla Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      cerrarModalMaridaje();
+    }
+  });
+
+  vincularEventosModal();
 
   function aplicarFiltros() {
     const q = normalizarTexto(terminoBusqueda);
@@ -1166,8 +1345,10 @@ function inicializarSeccionCatalogo() {
       const tit = normalizarTexto(libro.titulo);
       const aut = normalizarTexto(libro.autor);
       const res = normalizarTexto(libro.resumenCorto);
+      const sin = normalizarTexto(libro.sinopsis || "");
+      const cat = normalizarTexto(libro.categoriaNombre || "");
 
-      return coincideCat && (tit.includes(q) || aut.includes(q) || res.includes(q));
+      return coincideCat && (tit.includes(q) || aut.includes(q) || res.includes(q) || sin.includes(q) || cat.includes(q));
     });
 
     renderizarCatalogo(filtrados);
